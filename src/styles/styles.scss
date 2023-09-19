@@ -1,0 +1,35 @@
+// Foundation
+@import "./foundation/libs";
+@import "./foundation/fonts";
+@import "./foundation/variables";
+
+// mixins
+@import "./mixins/mixins";
+
+// Foundation
+@import "./foundation/base";
+@import "./foundation/functions";
+
+// Components
+@import "./components/app-button";
+@import "./components/app-modal";
+@import "./components/container";
+@import "./components/input-field";
+@import "./components/modal";
+@import "./components/main";
+@import "./components/pagination";
+@import "./components/slider";
+
+// App
+@import "./app/menu-button";
+@import "./app/header";
+@import "./app/footer";
+
+// Pages
+@import "./pages/welcome-page";
+
+// blocks
+@import "./blocks/modal-feedback-form";
+
+// helpers внизу - чтобы работал каскад
+@import "./foundation/helpers";

@@ -1,0 +1,25 @@
+{% set hasBreadcrumbs = hasBreadcrumbs | default(false) %}
+{% set hasHeader = hasHeader | default(true) %}
+{% set hasFooter = hasFooter | default(true) %}
+{% set description = description | default('default description of page') %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+  {% block head %}
+    {% include "../components/app/head.njk" %}
+  {% endblock %}
+
+  <body>
+    {% if hasHeader %}
+      {% include "../components/app/header.njk" %}
+    {% endif %}
+    <main  class="main {{mainMods}}">
+      {% block main %}{% endblock %}
+    </main>
+    {% if hasFooter %}
+      {% include "../components/app/footer.njk" %}
+    {% endif %}
+    {% block modals %}{% endblock %}
+  </body>
+</html>

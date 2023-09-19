@@ -1,0 +1,62 @@
+// Opacity
+$op20: 0.2;
+$op40: 0.4;
+$op80: 0.8;
+$op100: 1;
+
+// Colors
+$color-primary: #f18770;
+$color-primary-hover: #fa6f50;
+$color-primary-light: #88c0bb;
+$color-primary-op40: rgba($color-primary, 40%);
+$color-primary-op80: rgba($color-primary, 80%);
+$gray: #c3c3c3;
+$black: #000;
+$site-black: #444;
+$white: #fff;
+$white10: rgba(#fff, 10%);
+$error: #f36565;
+
+// Breakpoints
+$min-width: 320px;
+$max-width: 1150px;
+$width-mobile: 375px;
+$width-mobile-h: 667px;
+$width-tablet: 767px;
+$width-tablet-h: 1024px;
+$width-desktop: 1438px;
+$width-desktop-h: 1918px;
+
+// Container
+$container-horizontal-padding: 16px;
+$container-max-width: 1110px + calc(2 * $container-horizontal-padding);
+
+// Backgrounds
+$background-color-primary: #e3e3e3;
+$background-color-modal: rgba(#e3e3e3, 0.6);
+
+// Fonts
+$font-family-primary: "Gilroy", sans-serif;
+
+// Font-weight
+$font-weight-base: 500;
+$font-weight-bold: 700;
+
+// Text
+$text-color-primary: #444;
+$text-black40: rgba(#444, 0.4);
+$text-black80: rgba(#444, 0.8);
+
+// Transitions
+$transition-base: 0.3s ease 0s;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+
+// Positioning
+$z-index-header: 10;
+$z-index-modal: 20;
+$z-index-upper-modal: 30;
+
+:root {
+  --gray: #c3c3c3;
+}

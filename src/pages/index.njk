@@ -1,0 +1,41 @@
+{% extends "./layouts/main.njk" %}
+{% block main %}
+  <div class="container">
+    <div class="welcome-page">
+      <div class="welcome-page__row">
+        <h1>Welcome friend!</h1>
+      </div>
+      <h2>Ниже представлен краткий гайд по работе с nunjucks-starter&#11015;</h2>
+      <p>Для запуска локального проекта нужно:</p>
+      <ul>
+        <li>Открой командную строку и перейди в папку проекта.</li>
+        <li>Убедись, что у тебя установлен Node.js на своем компьютере, введи в командной строке команду: <strong>node -v</strong>.
+          Версия Node.js обязательно должна быть не ниже 18.X.X во избежание конфликтов</li>
+        <li>Выполни установку зависимостей: <strong>yarn install</strong></li>
+        <li>После завершения установки запусти проект: <strong>yarn dev</strong></li>
+      </ul>
+
+      <p>Отлично! Теперь у тебя должен открыться проект в браузере.</p>
+      <p>Когда ты закончишь работу над проектом и будешь готов опубликовать его, вот что нужно сделать:</p>
+
+      <ul>
+        <li>Введи в командной строке:<strong> yarn lint</strong> для проверки и правки кода</li>
+        <li><strong>yarn preview</strong> для запуска предпросмотра сборки локально</li>
+        <li><strong>yarn build</strong> для сборки продакшн версии</li>
+        <li>После успешной сборки, в папке проекта появится папка dist, в которой будут лежать все необходимые файлы для продакшн версии.</li>
+      </ul>
+
+      <p>Также, чтобы твоя работа была еще более приятной, в проекте уже включены некоторые полезные инструменты:</p>
+
+      <ul>
+        <li>Линтинг стилей с <a href="https://stylelint.io/">stylelint</a>.</li>
+        <li>Автопрефиксы CSS правил с <a href="https://postcss.org/">postcss</a> и <a href="https://github.com/csstools/postcss-preset-env">postcss-preset-env</a>.</li>
+        <li>Поддержка SASS с <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a>.</li>
+        <li>Линтинг JS с <a href="https://eslint.org/">eslint</a>.</li>
+        <li>Поддержка ES6 с <a href="https://babeljs.io/">babel</a> (v7).</li>
+        <li>Мы также использовали JS модули, разработанные командой Лиги А. Исходный код можно найти <a href="https://github.com/htmlonelove/liga-reshare">здесь.</a></li>
+        <li>Для всех проектов Favicon генерим только <a href="https://realfavicongenerator.net/">тут:</a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

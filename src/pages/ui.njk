@@ -1,0 +1,28 @@
+{% extends "./layouts/main.njk" %}
+{% set title = "UI | Site page" %}
+{% set mainMods = 'main-ui' %}
+{% set currentPageName = 'UI' %}
+
+{% block main %}
+  <div class="container">
+    <h1>UI Kit</h1>
+    <button type="button" class="app-button app-button--primary" data-open-modal="modal-feedback-form">Show modal feedback</button>
+    <button type="button" class="app-button app-button--primary" disabled="disabled">App button disabled</button>
+      <div class="example-slider swiper">
+    <ul class="example-slider__list swiper-wrapper">
+      {% for item in range(0, 5) %}
+      <li class="swiper-slide">
+        <img src="https://parnis.co.il/wp-content/uploads/2020/03/Test-Logo-Small-Black-transparent-1.png" alt="example img">
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+      {% set swiperPaginationParentClass = 'example-slider__pagination' %}
+      {% include "./components/ui/swiper-pagination.njk" %}
+  </div>
+{% endblock %}
+
+{% block modals %}
+  {% include "./components/modals/modal-feedback-form.njk" %}
+
+{% endblock %}

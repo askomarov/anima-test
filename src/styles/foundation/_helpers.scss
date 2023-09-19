@@ -1,0 +1,78 @@
+.scroll-lock-ios {
+  position: fixed;
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.full-width {
+  margin: 0 (-$container-horizontal-padding);
+  padding: 0 $container-horizontal-padding;
+
+  @media (min-width: $width-tablet-h) {
+    margin: 0 calc((100vw - var(--scrollbar-width) - 100%) / -2);
+    padding: 0 calc((100vw - var(--scrollbar-width) - $container-max-width) / 2);
+  }
+}
+
+.lg-hidden {
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+}
+
+.xl-hidden {
+  @media (min-width: $width-tablet-h) {
+    display: none;
+  }
+}
+
+.lg-block {
+  display: none;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
+}
+
+.xl-block {
+  display: none;
+
+  @media (min-width: $width-tablet-h) {
+    display: block;
+  }
+}
+
+.mb {
+  margin-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 80px;
+  }
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.scroll-padding-top {
+  scroll-padding-block-start: 90px;
+
+  @media (width >=768px) {
+    scroll-padding-block-start: 160px;
+  }
+}

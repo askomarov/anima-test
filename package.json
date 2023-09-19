@@ -1,0 +1,48 @@
+{
+  "name": "nunjucks-starter",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "scripts": {
+    "dev": "vite --open --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:js": "eslint --ignore-path .gitignore ./src/scripts/**/*.js --fix",
+    "lint:styles": "stylelint ./src/styles/**/*.scss --fix",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "normalize.css": "^8.0.1",
+    "swiper": "^10.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/cz-commitlint": "^17.7.1",
+    "@vituum/vite-plugin-nunjucks": "^1.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "husky": "^8.0.3",
+    "inquirer": "8",
+    "postcss": "^8.4.27",
+    "sass": "^1.64.2",
+    "stylelint": "^15.10.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-scss": "^5.0.1",
+    "vite": "^4.4.7",
+    "vituum": "^1.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/@commitlint/cz-commitlint"
+    }
+  },
+  "packageManager": "yarn@3.6.1"
+}

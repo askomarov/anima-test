@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "html-validate.vscode-html-validate",
+    "douglaszaltron.nunjucks-vscode-extensionpack",
+    "formulahendry.auto-rename-tag",
+    "editorconfig.editorconfig"
+  ]
+}

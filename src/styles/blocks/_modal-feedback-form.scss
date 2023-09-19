@@ -1,0 +1,25 @@
+.modal-feedback-form {
+  display: grid;
+  gap: 12px;
+  max-width: 748px;
+  max-height: 560px;
+  overflow-y: auto;
+
+  @media (min-width: $width-tablet) {
+    padding: 32px;
+    gap: 32px;
+    max-height: initial;
+  }
+}
+
+.modal-feedback-form__title {
+  font-weight: 500;
+  font-size: rem(24px);
+  line-height: 120%;
+}
+
+.modal-feedback-form__text {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
+}

@@ -1,0 +1,141 @@
+.input-field.error {
+  .input-field__input {
+    border-color: $error;
+  }
+
+  .input-field__helper-text {
+    color: $error;
+    position: relative;
+    transform: translateY(0);
+    opacity: $op100;
+    visibility: visible;
+  }
+}
+
+.input-field__input-wrap {
+  position: relative;
+}
+
+.input-field__button-search {
+  border: 0;
+  outline: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: auto;
+  padding: 5px;
+  background: $color-primary;
+  color: $white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+
+  svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  @media (min-width: $width-tablet) {
+    border-radius: 12px;
+  }
+}
+
+.input-field__button--close {
+  color: $gray;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+
+  &:active {
+    color: $color-primary;
+  }
+}
+
+.input-field__input {
+  width: 100%;
+  min-height: 32px;
+  display: block;
+  outline: none;
+  background: $white;
+  border: 1px solid $black;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: rem(14px);
+  line-height: 1.2;
+  font-weight: $font-weight-base;
+
+  &::placeholder {
+    font-size: inherit;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $width-tablet) {
+    border-radius: 12px;
+    font-size: rem(18px);
+    line-height: 1.8;
+    min-height: 48px;
+    padding-inline: 18px;
+  }
+
+  &:not(:placeholder-shown) {
+    ~ .input-field__button {
+      opacity: $op100;
+      visibility: visible;
+    }
+  }
+}
+
+.input-field__button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: calc(40px + 16px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input-field__helper-text {
+  font-size: rem(12px);
+  padding-top: 4px;
+  display: block;
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.input-field__label {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $font-weight-base;
+  font-size: rem(18px);
+  line-height: 1.1;
+
+  @media (min-width: $width-tablet) {
+    font-size: rem(24px);
+    line-height: 1.2;
+  }
+}
+
+.input-field__input--textarea {
+  display: block;
+  resize: none;
+  height: 176px;
+}
+
+.input-field__input--search {
+  padding-right: 78px;
+}

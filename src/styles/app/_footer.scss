@@ -1,0 +1,9 @@
+.footer {
+  background-color: $site-black;
+  color: $white;
+  padding-block: 24px;
+
+  @media (min-width: $width-tablet) {
+    padding-block: 40px 46px;
+  }
+}

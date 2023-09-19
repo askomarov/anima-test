@@ -1,0 +1,24 @@
+.menu-button {
+  display: none;
+
+  @media (width < $width-tablet-h) {
+    cursor: pointer;
+    color: $white;
+    display: grid;
+    place-items: center;
+    border: 0;
+    outline: 0;
+    background: transparent;
+  }
+}
+
+.menu-button__icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .menu-button__icon-path-close {
+    display: none;
+  }
+}

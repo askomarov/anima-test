@@ -1,0 +1,36 @@
+.app-modal {
+  margin: 0 auto;
+  position: relative;
+  border-radius: 16px;
+  padding: 16px;
+  background: $white;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+}
+
+.app-modal__button-close {
+  color: $text-color-primary;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover:not(:disabled, [disabled]),
+  &:focus-visible:not(:disabled, [disabled]) {
+    color: $color-primary;
+  }
+
+  &:active:not(:disabled, [disabled]) {
+    color: $color-primary-hover;
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: $gray;
+  }
+}

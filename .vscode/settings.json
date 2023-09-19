@@ -1,0 +1,23 @@
+{
+  "stylelint.snippet": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "html.suggest.html5": true,
+  "emmet.includeLanguages": {
+    "njk": "html",
+    "nunjucks": "html"
+  },
+  "files.associations": {
+    "*.njk": "njk"
+  },
+  "nuxt.isNuxtApp": false
+}
