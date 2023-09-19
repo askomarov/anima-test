@@ -3,5 +3,6 @@ import "./ios-checker";
 import "./isMobile";
 import "./modals";
 // export { default as move-to } from './move-to'
+import "./parallax-mouse";
 import "./scroll-lock";
 import "./utils";

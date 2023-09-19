@@ -16,12 +16,12 @@
   <div class="header__container container">
     <nav class="header__menu header-menu">
       {% if currentPageName === 'Home' %}
-        <div class="header-menu__logo-wrap">
-
+        <div class="header-menu__logo-wrap" data-cursor-text="Hello!">
+          Logo hover me
         </div>
       {% else %}
-        <a href="/" class="header-menu__logo-wrap">
-
+        <a href="/" class="header-menu__logo-wrap" data-cursor-text="Hello!">
+          Logo hover me
         </a>
       {% endif %}
       {% include "./menu-button.njk" %}
@@ -31,7 +31,7 @@
           {% for item in menu %}
             {% if item.name === currentPageName %}
               <li class="header-menu__item">
-                <a class="header-menu__link active">
+                <a class="header-menu__link active" data-cursor="-exclusion">
                   {{item.name}}
                 </a>
               </li>

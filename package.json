@@ -15,7 +15,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "gsap": "^3.12.2",
+    "mouse-follower": "^1.1.2",
     "normalize.css": "^8.0.1",
     "swiper": "^10.1.0"
   },

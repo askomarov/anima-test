@@ -19,6 +19,7 @@
 @import "./components/main";
 @import "./components/pagination";
 @import "./components/slider";
+@import "./components/cursor";
 
 // App
 @import "./app/menu-button";
@@ -33,3 +34,32 @@
 
 // helpers внизу - чтобы работал каскад
 @import "./foundation/helpers";
+
+.cb-btn_menu {
+  position: relative;
+  transition: all $transition-base;
+  will-change: transform;
+
+  // position: fixed;
+  // top: 2.25rem;
+  // right: 2.5rem;
+  z-index: 251;
+
+  &:hover{
+    color:$white;
+  }
+
+
+  #stuckme{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -6px;
+    transform: translate(0, -50%);
+    margin: 0;
+    width: 250%;
+    height: 300%;
+    display: block;
+    background-color: transparent;
+  }
+}
