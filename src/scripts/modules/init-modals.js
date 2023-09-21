@@ -1,5 +1,5 @@
 import { Modals } from "../utils/modals";
-import { setBtnStateOpenModal } from "./header-menu";
+import { setBtStateCloseModal, setBtnStateOpenModal } from "./header-menu";
 
 const settings = {
   default: {
@@ -18,6 +18,7 @@ const settings = {
       setBtnStateOpenModal();
     },
     closeCallback: () => {
+      setBtStateCloseModal();
     },
   },
 };

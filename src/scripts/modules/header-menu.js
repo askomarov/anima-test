@@ -16,18 +16,12 @@ const showMenu = () => {
 
 const setBtnStateOpenModal = () => {
   menuButton.classList.add("menu-button--opened");
-  menuButton.removeAttribute("data-close-modal", "");
-  menuButton.setAttribute("data-open-modal", "modal-menu");
 };
 const setBtStateCloseModal = () => {
   menuButton.classList.remove("menu-button--opened");
-  menuButton.removeAttribute("data-open-modal", "modal-menu");
-  menuButton.setAttribute("data-close-modal", "");
 };
 
 const closeMenu = () => {
-  menuButton.setAttribute("aria-label", "open menu");
-  menuButton.classList.remove("menu-button--opened");
   window.modals.close("modal-menu");
 };
 
@@ -48,7 +42,9 @@ const initHeaderMenu = () => {
     menuButton.addEventListener("click", () => {
       console.log("click");
       if (menuButton.classList.contains("menu-button--opened")) {
-        closeMenu();
+        window.modals.close("modal-menu");
+      } else {
+        window.modals.open("modal-menu");
       }
     });
 
