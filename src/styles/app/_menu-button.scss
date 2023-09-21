@@ -1,23 +1,119 @@
 .menu-button {
-  display: none;
+  cursor: pointer;
+  color: $black;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  background: transparent;
+  width: 25px;
+  height: 25px;
 
-  @media (width < $width-tablet-h) {
-    cursor: pointer;
-    color: $white;
-    display: grid;
-    place-items: center;
-    border: 0;
-    outline: 0;
-    background: transparent;
+  span {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    height: 2px;
+    margin: 5px 0;
+    transform: translateZ(0);
+    color: inherit;
+    background: currentcolor;
+    transition: top 0.3s 0.3s, transform 0.3s;
   }
 }
 
-.menu-button__icon {
-  display: block;
-  width: 100%;
-  height: 100%;
+.menu-button--opened {
+  span:first-child {
+    animation: cb-btn-menu-open-top 0.75s;
+    top: 3px;
+    transform: rotate(45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+  }
 
-  .menu-button__icon-path-close {
-    display: none;
+  span:last-child {
+    animation: cb-btn-menu-open-bottom 0.75s;
+    top: -5px;
+    transform: rotate(-45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+  }
+}
+
+@keyframes cb-btn-menu-open-top {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(1);
+    transform-origin: left center;
+  }
+
+  30% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(0);
+  }
+
+  30.1% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(0);
+  }
+
+  31% {
+    opacity: 1;
+    top: -5px;
+    left: 3px;
+    transform: rotate(45deg) scaleX(0);
+  }
+
+  100%,
+  80% {
+    opacity: 1;
+    top: -5px;
+    left: 3px;
+    transform: rotate(45deg) scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes cb-btn-menu-open-bottom {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(1);
+    transform-origin: right center;
+  }
+
+  50% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(0);
+  }
+
+  50.1% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: rotate(0) scaleX(0);
+  }
+
+  51%,
+  55% {
+    opacity: 1;
+    top: -12px;
+    left: -4px;
+    transform: rotate(-45deg) scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    top: -12px;
+    left: -4px;
+    transform: rotate(-45deg) scaleX(1);
+    transform-origin: right center;
   }
 }

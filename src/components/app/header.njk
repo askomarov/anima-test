@@ -11,7 +11,7 @@
 
 {% set socialListParentClass = 'header-menu__social-list' %}
 
-<header class="header" id="header">
+<header class="header" id="header" data-fix-block>
 
   <div class="header__container container">
     <nav class="header__menu header-menu">
@@ -25,26 +25,6 @@
         </a>
       {% endif %}
       {% include "./menu-button.njk" %}
-
-      <div class="header-menu__mobile-wrap">
-        <ul class="header-menu__list">
-          {% for item in menu %}
-            {% if item.name === currentPageName %}
-              <li class="header-menu__item">
-                <a class="header-menu__link active" data-cursor="-exclusion">
-                  {{item.name}}
-                </a>
-              </li>
-            {% else %}
-              <li class="header-menu__item">
-                <a href="{{ item.href }}" class="header-menu__link">
-                  {{item.name}}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
     </nav>
   </div>
 </header>

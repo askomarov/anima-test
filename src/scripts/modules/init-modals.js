@@ -1,4 +1,5 @@
 import { Modals } from "../utils/modals";
+import { setBtnStateOpenModal } from "./header-menu";
 
 const settings = {
   default: {
@@ -11,6 +12,13 @@ const settings = {
     eventTimeout: 400,
     openCallback: false,
     closeCallback: false,
+  },
+  "modal-menu": {
+    openCallback: () => {
+      setBtnStateOpenModal();
+    },
+    closeCallback: () => {
+    },
   },
 };
 
