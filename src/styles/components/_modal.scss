@@ -16,6 +16,7 @@ $modal-transition: 0.2s cubic-bezier(0.55, 0, 0.1, 1);
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: none;
