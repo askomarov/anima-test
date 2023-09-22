@@ -1,6 +1,12 @@
 .footer {
+  padding: 0;
+  height: 320px;
   background-color: $site-black;
   color: $white;
+  overflow: hidden;
+}
+
+.footer__container {
   padding-block: 24px;
 
   @media (min-width: $width-tablet) {

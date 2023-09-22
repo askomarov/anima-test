@@ -1,3 +1,4 @@
 import "./example-slider";
 import "./header-menu";
-// export { default as init-modals } from './init-modals.js'
+import "./init-list-animation";
+// export { default as init-modals } from './init-modals'

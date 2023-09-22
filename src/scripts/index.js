@@ -1,18 +1,38 @@
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { parallaxMouse } from "./utils/parallax-mouse";
 import { initHeaderMenu } from "./modules/header-menu";
 import initModals from "./modules/init-modals";
 import { ScrollLock } from "./utils/scroll-lock";
 import { initExampleSlider } from "./modules/example-slider";
+import { initListAnimation } from "./modules/init-list-animation";
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.remove("loading");
-  setTimeout(() => {
-    document.body.classList.remove("scroll-lock");
-  }, 600);
+  // document.body.classList.remove("loading");
+  // setTimeout(() => {
+  //   document.body.classList.remove("scroll-lock");
+  // }, 600);
 
   window.addEventListener("load", () => {
+    gsap.to(".body", { autoAlpha: 1, duration: 0.6 });
+
+    gsap.from(".footer", {
+      opacity: 0,
+      y: 150,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".footer",
+        scrub: true,
+        start: "top bottom",
+        end: "60% bottom",
+        // markers: true,
+      }
+    });
+    //
+    initListAnimation();
     window.scrollLock = new ScrollLock();
     // const { modals } = initModals();
     initModals();
@@ -22,6 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cursor = new MouseFollower();
     const el = document.querySelector(".my-element");
+    //
+    const imageListItems = document.querySelectorAll(".image-list li a");
+    [...imageListItems].forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        cursor.setText("Explore");
+        cursor.setSkewing(4);
+      });
+      item.addEventListener("mouseleave", () => {
+        cursor.removeText();
+        cursor.removeSkewing();
+      });
+    });
+    //
     el.addEventListener("mouseenter", () => {
       cursor.addState("-inverse"); // you can pass multiple states separated by whitespace
     });
