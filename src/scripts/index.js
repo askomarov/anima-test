@@ -7,6 +7,11 @@ import { ScrollLock } from "./utils/scroll-lock";
 import { initExampleSlider } from "./modules/example-slider";
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("loading");
+  setTimeout(() => {
+    document.body.classList.remove("scroll-lock");
+  }, 600);
+
   window.addEventListener("load", () => {
     window.scrollLock = new ScrollLock();
     // const { modals } = initModals();

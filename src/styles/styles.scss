@@ -9,6 +9,7 @@
 // Foundation
 @import "./foundation/base";
 @import "./foundation/functions";
+@import "./foundation/body";
 
 // Components
 @import "./components/app-button";
@@ -30,8 +31,7 @@
 @import "./pages/welcome-page";
 
 // blocks
-@import "./blocks/modal-feedback-form";
-@import "./blocks/modal-menu";
+@import "./blocks/+";
 
 // helpers внизу - чтобы работал каскад
 @import "./foundation/helpers";
