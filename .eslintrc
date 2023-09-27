@@ -7,7 +7,7 @@
     "airbnb-base",
     "eslint:recommended"
   ],
-  "ignorePatterns": ["src/scripts/utils/parallax-mouse.js", "**/vendor/*.js"],
+  "ignorePatterns": ["src/scripts/utils/**"],
   "rules": {
     "max-len": [
       "warn",

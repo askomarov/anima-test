@@ -1,6 +1,7 @@
 .body {
   position: relative;
   visibility: hidden;
+  overflow-x: hidden;
 
   &::after {
     content: "";

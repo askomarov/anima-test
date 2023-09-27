@@ -57,3 +57,10 @@ yarn build
 ```sh
 src="/src/assets/img/logo.svg"
 ```
+
+
+## Библиотека для курсора
+[mouse-follower](https://github.com/Cuberto/mouse-follower)
+
+## GSAP
+[gsap docs](https://greensock.com/docs/)

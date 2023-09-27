@@ -7,16 +7,14 @@ import initModals from "./modules/init-modals";
 import { ScrollLock } from "./utils/scroll-lock";
 import { initExampleSlider } from "./modules/example-slider";
 import { initListAnimation } from "./modules/init-list-animation";
+import { Marquee3k } from "./utils/marquee3k";
+import { handleMarqueeDirection } from "./modules/handle-marquee-direction";
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-  // document.body.classList.remove("loading");
-  // setTimeout(() => {
-  //   document.body.classList.remove("scroll-lock");
-  // }, 600);
-
   window.addEventListener("load", () => {
+    handleMarqueeDirection();
     gsap.to(".body", { autoAlpha: 1, duration: 0.6 });
 
     gsap.from(".footer", {
@@ -31,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // markers: true,
       }
     });
-    //
+    Marquee3k.init({
+      selector: "hero__running-line", // define a custom classname
+    });
     initListAnimation();
     window.scrollLock = new ScrollLock();
     // const { modals } = initModals();
@@ -73,13 +73,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const el3 = document.querySelector(".my-image");
     el3.addEventListener("mouseenter", () => {
-      cursor.setImg("/favicon-16x16.png");
+      cursor.setImg("./src/assets/img/smiling-eyes.png");
+      cursor.setSkewing(2);
     });
 
     el3.addEventListener("mouseleave", () => {
       cursor.removeImg();
+      cursor.removeSkewing();
+    });
+    //
+    const elVideo = document.querySelector(".new-project");
+    elVideo.addEventListener("mouseenter", () => {
+      cursor.addState("-media--lg");
+      cursor.addState("-media");
+      cursor.setVideo("//cdn.cuberto.com/cb/projects/flipaclip/cover.mp4");
     });
 
+    elVideo.addEventListener("mouseleave", () => {
+      cursor.removeVideo();
+      cursor.removeState("-media");
+      cursor.removeState("-media--lg");
+    });
+    const elVideo22 = document.querySelector(".new-project22");
+    elVideo22.addEventListener("mouseenter", () => {
+      cursor.addState("-media--lg");
+      cursor.addState("-media");
+      cursor.setVideo("//cdn.cuberto.com/cb/projects/puntopago/main.mp4");
+    });
+
+    elVideo22.addEventListener("mouseleave", () => {
+      cursor.removeVideo();
+      cursor.removeState("-media");
+      cursor.removeState("-media--lg");
+    });
+    //
     const btnWithStick = document.querySelector(".cb-btn_menu");
     parallaxMouse({
       elements: ".cb-btn_menu", moveFactor: 100, wrap: ".cb-btn_menu"

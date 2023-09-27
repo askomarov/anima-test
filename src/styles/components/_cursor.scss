@@ -68,6 +68,20 @@ $mf-color-text: #fff !default;
     }
   }
 
+  &.-media--lg {
+    .mf-cursor-media {
+      --size: 300px;
+
+      width: var(--size);
+      height: var(--size);
+      margin: calc((var(--size) * -0.5)) 0 0 calc((var(--size) * -0.5));
+
+      @media (min-width:$width-tablet-h) {
+        --size: 400px;
+      }
+    }
+  }
+
   &.-icon {
     &::before {
       transform: scale(1.5);

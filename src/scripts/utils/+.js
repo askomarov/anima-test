@@ -1,8 +1,9 @@
-import "./focus-lock";
-import "./ios-checker";
-import "./isMobile";
-import "./modals";
-// export { default as move-to } from './move-to'
-import "./parallax-mouse";
-import "./scroll-lock";
-import "./utils";
+import './focus-lock.js'
+import './ios-checker.js'
+import './isMobile.js'
+import './marquee3k.js'
+import './modals.js'
+export { default as move-to } from './move-to.js'
+import './parallax-mouse.js'
+import './scroll-lock.js'
+import './utils.js'
