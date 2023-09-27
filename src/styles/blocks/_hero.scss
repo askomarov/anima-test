@@ -9,6 +9,8 @@
   line-height: 1.5;
   display: flex;
   align-items: center;
+  width: 100%;
+  overflow-x: hidden;
 
   @media (min-width:$width-tablet) {
     font-size: rem(80px);
